@@ -5,7 +5,6 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                We Create our first Component!
                 <ToDoList />
             </div>
         )
