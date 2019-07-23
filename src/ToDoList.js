@@ -5,6 +5,7 @@ import './Style.css'
 export default class ToDoList extends React.Component {
     state = {
         list_title: "",
+        current_value: "",
         todos: [
         ]
     }
@@ -24,6 +25,8 @@ export default class ToDoList extends React.Component {
                 <input 
                     placeholder="Todo Item Name..." 
                     type="text"
+                    value={this.state.current_value}
+                    onChange={(event) => {this.setState({current_value: event.target.value})}}
                 />
                 <br />
                 {
