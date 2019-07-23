@@ -29,7 +29,7 @@ export default class ToDoList extends React.Component {
                 {
                     this.state.todos.map(todo => {
                         return (
-                            <TodoListItem />
+                            <TodoListItem title={todo.title} completed={todo.completed}/>
                         )
                     })
                 }
