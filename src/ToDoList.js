@@ -29,7 +29,21 @@ export default class ToDoList extends React.Component {
                     onChange={(event) => {this.setState({current_value: event.target.value})}}
                 />
                 <br />
-                {
+               
+                <button onClick={() => {
+                    this.setState(prevState => ({
+                            todos: prevState.todos.concat({
+                                title: this.state.current_value, 
+                                completed: false
+                            }),
+                            current_value: ''
+                        })
+                    )
+                }}> Add Item to List </button>
+
+
+                 {
+                    //displaying the list     
                     this.state.todos.map(todo => {
                         return (
                             <TodoListItem 
@@ -38,7 +52,6 @@ export default class ToDoList extends React.Component {
                         )
                     })
                 }
-                <button>Add Item to List</button>
             </div>
         )
     }
