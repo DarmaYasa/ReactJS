@@ -9,10 +9,7 @@ body {
     justify-items: center;
     align-items: center;
     width: 100%;
-}
-
-.todo-wrapper {
-    
+    overflow: hidden;
 }
 
 .todo-wrapper h2 {
@@ -45,8 +42,6 @@ body {
     box-shadow: 0px 3px 10px -5px rgba(0,0,0,0.2);
     border-radius: 10px;
     width: 100%;
-    display: flex;
-    justify-content: left;
     box-sizing: border-box;
 }
 
