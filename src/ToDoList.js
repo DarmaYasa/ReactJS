@@ -13,36 +13,36 @@ export default class ToDoList extends React.Component {
 
     render() {
         return (
-            <div className="todo-list">
+            <div className="todo-wrapper">
                 <h2>to do list...</h2>   
-                <label>Title</label> <br />
-                <input 
-                    placeholder="Enter title..." 
-                    type="text" 
-                    value={this.state.list_title}
-                    onChange={(event)=> { this.setState({ list_title: event.target.value})}}
-                />
-                <input 
-                    placeholder="Todo Item Name..." 
-                    type="text"
-                    value={this.state.current_value}
-                    onChange={(event) => {this.setState({current_value: event.target.value})}}
-                />
-                <br />
-               
-                <button onClick={() => {
-                    this.setState(prevState => ({
-                            todos: prevState.todos.concat({
-                                title: this.state.current_value, 
-                                completed: false
-                            }),
-                            current_value: ''
-                        })
-                    )
-                }}> Add Item to List </button>
+                <div className="input">
+                    <input 
+                        placeholder="Enter title..." 
+                        type="text" 
+                        value={this.state.list_title}
+                        onChange={(event)=> { this.setState({ list_title: event.target.value})}}
+                    /> 
+                    <input 
+                        placeholder="Todo Item Name..." 
+                        type="text"
+                        value={this.state.current_value}
+                        onChange={(event) => {this.setState({current_value: event.target.value})}}
+                    />
+                
+                    <button onClick={() => {
+                        this.setState(prevState => ({
+                                todos: prevState.todos.concat({
+                                    title: this.state.current_value, 
+                                    completed: false
+                                }),
+                                current_value: ''
+                            })
+                        )
+                    }}> + </button>
+                </div>
 
-
-                 {
+                <div className="todo-list">
+                {
                     //displaying the list     
                     this.state.todos.map(todo => {
                         return (
@@ -52,6 +52,7 @@ export default class ToDoList extends React.Component {
                         )
                     })
                 }
+                </div>
             </div>
         )
     }

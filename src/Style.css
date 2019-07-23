@@ -2,7 +2,70 @@
     font-family: sans-serif;
 }
 
-.todo-list {
+body {
+    background-color: rgb(252, 250, 250);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.todo-wrapper {
     
-    text-align : center;
+}
+
+.todo-wrapper h2 {
+    text-transform: capitalize;
+}
+
+.todo-wrapper .input input {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background: #eee;
+}
+
+.todo-wrapper .input button {
+    background: rgb(0, 250, 133);
+    border: none;
+    border-radius: 5px;
+    width: 37px;
+    height: 37px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+}
+
+.todo-list {
+    margin-top: 5px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 3px 10px -5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    box-sizing: border-box;
+}
+
+.todo-list .list {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.list button {
+    background: rgb(250, 79, 0);
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
 }
