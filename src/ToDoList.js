@@ -18,7 +18,11 @@ export default class ToDoList extends React.Component {
     
 
     deleteTodoByIndex(index) {
-        console.log('index', index)
+        this.setState(prevState => (
+            {
+                todos: [...prevState.todos.slice(0, index), ...prevState.todos.slice(index + 1)],
+            }
+        ))
     } 
 
 

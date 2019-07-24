@@ -1,5 +1,9 @@
 Project ini hanya untuk mencoba ReactJS
 
+Mounting : Memasukkan komponen ke DOM
+Updating : Re-rendering komponen karena update dari props atau state
+Unmounting : mengeluarkan komponen dari DOM
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
